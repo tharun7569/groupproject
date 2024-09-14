@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .item-list {
+            margin-top: 20px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .verification-form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Items to Distribute</h2>
+
+    <div class="item-list">
+        <div class="item">
+            <span>Food:</span>
+            <span id="foodCount">100</span>
+        </div>
+        <div class="item">
+            <span>Clothes:</span>
+            <span id="clothesCount">50</span>
+        </div>
+    </div>
+
+    <div class="verification-form">
+        <h2>Volunteer Verification</h2>
+        <form id="verificationForm">
+            <label for="verificationCode">Verification Code:</label>
+            <input type="text" id="verificationCode" name="verificationCode" required>
+
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('verificationForm').addEventListener('submit', function (event) {
+        // In a real scenario, you would perform server-side verification here.
+        // For simplicity, this example just prevents the form from submitting.
+        event.preventDefault();
+        alert('Volunteer verified!');
+    });
+</script>
+
+</body>
+</html>
